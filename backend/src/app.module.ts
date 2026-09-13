@@ -1,12 +1,12 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { MongooseModule } from '@nestjs/mongoose';
+// import { MongooseModule } from '@nestjs/mongoose';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { EmployeesModule } from './employees/employees.module';
-import { PayrollModule } from './payroll/payroll.module';
-import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
+// import { EmployeesModule } from './employees/employees.module';
+// import { PayrollModule } from './payroll/payroll.module';
+// import { AuthModule } from './auth/auth.module';
+// import { UsersModule } from './users/users.module';
 import { MailModule } from './mail/mail.module';
 
 @Module({
@@ -14,6 +14,7 @@ import { MailModule } from './mail/mail.module';
     ConfigModule.forRoot({
       isGlobal: true,
     }),
+    /*
     MongooseModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
@@ -25,6 +26,7 @@ import { MailModule } from './mail/mail.module';
     PayrollModule,
     AuthModule,
     UsersModule,
+    */
     MailModule,
   ],
   controllers: [AppController],
